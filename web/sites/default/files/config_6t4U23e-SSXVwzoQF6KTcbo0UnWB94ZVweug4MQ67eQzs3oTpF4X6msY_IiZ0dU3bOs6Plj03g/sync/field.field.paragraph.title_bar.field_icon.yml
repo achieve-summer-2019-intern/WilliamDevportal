@@ -1,0 +1,23 @@
+uuid: f56843a4-c0a3-4e8e-a17c-32b25f8e69e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.title_bar
+  module:
+    - fontawesome
+_core:
+  default_config_hash: dkSvmyWU0ZPX-D-g76W-NaUfFHAJ-jwzo1DS03QmGW0
+id: paragraph.title_bar.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: title_bar
+label: 'Title bar icon'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

@@ -1,0 +1,27 @@
+uuid: 1e8d0e09-957c-4cda-b2c1-4b7b2a84722d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq.field_answer
+    - node.type.faq
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: eb8oKTw6Ka78xR-3SDvwVj-E7Quo04j4S4ny0ihTs4g
+id: node.faq.teaser
+targetEntityType: node
+bundle: faq
+mode: teaser
+content:
+  field_answer:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true
