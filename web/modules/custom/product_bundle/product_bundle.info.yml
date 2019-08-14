@@ -1,0 +1,4 @@
+name: Product Bundle 
+type: module
+description: The Product Bundle for Apigee Edge
+core: 8.x

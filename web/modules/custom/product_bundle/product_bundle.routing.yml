@@ -1,0 +1,7 @@
+product_bundle.content: 
+    path: '/productBundle'
+    defaults: 
+      _controller: 'Drupal\product_bundle\Controller\ProductBundleController::content'
+      _title: 'All Products Bundle'
+    requirements:
+      _permission: 'access content'
