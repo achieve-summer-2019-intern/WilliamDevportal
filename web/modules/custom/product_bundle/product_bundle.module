@@ -1,10 +1,45 @@
 <?php 
 
+
+
+
 function product_bundle_form_alter(&$form, &$form_state, $form_id){
     if($form_id == "developer_app_add_for_developer_form"){
-        $form['api_products']['#type'] = 'radios';
-        foreach($form['api_products'] as $key => $value) {
-            drupal_set_message($key." has the value ". $value);
+        $form['api_products']['#type'] = 'select';
+
+        $product = array('product');
+        $form['ProductA'] = [
+            '#title' => 'ProductA',
+            '#type' => 'radios',
+            '#default_value' => 1,
+            '#options' => array(
+                0 => 'Barcode Default Plan',
+                1 => 'Barcode 5,000 Plan',
+            ),
+        ];
+
+        $form['ProductB'] = [
+            '#title' => 'ProductB',
+            '#type' => 'select',
+            '#default_value' => 1,
+            '#options' => array(
+                0 => 'Elie Default Plan',
+                1 => 'Elie 5,000 Plan',
+            ),
+        ];
+
+
+        // foreach($form['api_products'] as $key => $value) {
+        //     drupal_set_message($form_id);
+        //     drupal_set_message($key." has the value ". $value);
+        // }
+
+        drupal_set_message(gettype($form['api_products']['#options'][0]));
+
+        foreach($form['api_products']['#options'] as $key => $value) {
+            drupal_set_message($key." has the type of ". gettype($value));
         }
+
+
     }
 }
